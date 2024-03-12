@@ -20,18 +20,20 @@
 
 let sts = document.querySelector ("h3")
 let addBtn = document.querySelector (".addFrnd ")
-  val = 0 
+  let val = 0 
 
   addBtn.addEventListener("click" , function (){
      if (val == 0) {
         sts.innerHTML = "Friend"
+        sts.style.color = "green"
         addBtn.innerHTML = "remove"
-        addBtn.style.backgroudColor = "red"
+        
         val = 1
      } else {
         
         addBtn.innerHTML = "Add Friend"
         sts.innerHTML = "Stranger"
+        sts.style.color = "red"
         val = 0
        
      }

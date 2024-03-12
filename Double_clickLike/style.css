@@ -7,6 +7,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    
    
 }
 
@@ -14,6 +16,7 @@ body{
    width: 300px;
    height: 350px;
     padding: 2px;
+    overflow: hidden;
 }
 
 .container img {
@@ -23,13 +26,38 @@ body{
     object-fit: cover;
     object-position: center;
     background-color: white;
+   
 }
 
-.container svg{
+.container i {
     position: absolute;
     color: white;
-    background-color: white;
+    font-size: 65px;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50% );
+    transform: translate(-50% , -50% )scale(0) ;
+    opacity: 0;
+    transition: transform ease 0.5 ;
+}
+
+.like i {
+   
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+
+    
+
+
+
+
+}
+.redHeart i {
+    color: red;
+    position: absolute;
+    top: 75%;
+    font-size: 45px;
+    left: 48%;
+    opacity: 0;
+    transition: transform ease 0.5 ;
 }
