@@ -22,7 +22,7 @@
 
 
 
-
+    var cart = [ ]
 
 
 
@@ -73,19 +73,20 @@
 
      document.querySelector(".populars").innerHTML = goodProduct;
 
-   }
-   
-    
-   function addtoCart () {
-      document.querySelector(".products")
-      .addEventListener("click" , (details) =>{
-        if (details.target.classList.contains ('add')){
-            console.log("add kro")
-        }
-      })
-   }
+   };
 
-    addtoCart ();
+   
+   function addtoCart() {
+    document.querySelector(".products").addEventListener("click", (details) => {
+        if (details.target.classList.contains('add')) {
+            cart.push(products[details.target.dataset.index]);
+        }
+    });
+}
+
+addtoCart();
+    
+   
    addCart ();
 
    addPopular ();
